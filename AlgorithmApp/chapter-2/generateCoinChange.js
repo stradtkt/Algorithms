@@ -10,3 +10,4 @@ function generateCoinChange(cents) {
   return result;
 }
 console.log(generateCoinChange(12394));
+
