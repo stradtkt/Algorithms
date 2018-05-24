@@ -13,3 +13,4 @@ function swapPairs(arr) {
   return arr;
 }
 console.log(swapPairs(['Kevin',1,'Patrick',2]));
+//output [1, 'Kevin', 2, 'Patrick']
