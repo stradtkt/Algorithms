@@ -135,4 +135,35 @@
    }
    return arr;
  }
- printArrayVals([1,2,3,4,5,6]);
+//  printArrayVals([1,2,3,4,5,6]);
+
+ /**
+  * Print Average of Array
+  * printAverageOfArray(arr)
+  * Analyze an array’s values and print the average.
+  */
+
+  function printAvg(arr) {
+    var sum = 0, avg = 0;
+    for(var i = 0; i < arr.length; i++) {
+      sum += arr[i];
+    }
+    avg = sum / arr.length;
+    return avg;
+  }
+  // console.log(printAvg([1,2,3,4,5,6,7,8]));
+
+/**
+ * Square Array Values
+ * squareArrayVals(arr)
+ * Square each value in a given array, 
+ * returning that same array with changed values.
+ */
+function squareArrayVals(arr) {
+  var square;
+  for(var i = 0; i < arr.length; i++) {
+    arr[i] *= arr[i];
+  }
+  return arr;
+}
+console.log(squareArrayVals([1,2,3,4,5,6,7,8]));
