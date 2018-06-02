@@ -92,4 +92,47 @@
 //  console.log(printMinMaxAverage([1,2,3,4,5,6,7,8]));
  //output [1,8,4.5]
 
- 
+ /**
+  * Swap String for Array Negative Values
+  * swapStringForArrayNegativeVals(arr ) Given an array of numbers, 
+  * replace any negative values with the string 'Dojo' .
+  */
+
+  function swapStringForArrayNegativeVals(arr) {
+    for(var i = 0; i < arr.length; i++) {
+      if(arr[i] < 0) {
+        arr[i] = "Dojo";
+      }
+    }
+    return arr;
+  }
+  // console.log(swapStringForArrayNegativeVals([1,-2,2,-2,3,-3]));
+
+/**
+ * Print Odds 1-255
+ * printOdds1To255()
+ * Print all odd integers from 1 to 255.
+ */
+
+ function printOdds() {
+   for(var i = 1; i <= 255; i++) {
+     if(i % 2 !== 0) {
+       console.log(i);
+     }
+   }
+ }
+//  printOdds();
+
+/**
+ * Print Array Values
+ * printArrayVals(arr)
+ * Iterate through a given array, printing each value.
+ */
+
+ function printArrayVals(arr) {
+   for(var i = 0; i < arr.length; i++) {
+     console.log(arr[i]);
+   }
+   return arr;
+ }
+ printArrayVals([1,2,3,4,5,6]);
