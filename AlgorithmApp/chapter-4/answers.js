@@ -106,4 +106,22 @@ console.log(getDigits("0s1a3y5w7h9a2t4?6!8?0"));
  console.log(removeShorterStrings(["Hello", "There", "my", "name", "is", "kevin"],3));
  //output ["Hello", "There", "name", "kevin"]
 
- 
+ /**
+  * String: Reverse
+  * Implement reverseString(str) that, given string, returns that string with 
+  * characters reversed. Given "creature" , return "erutaerc" . 
+  * Tempting as it seems, do not use the built-in reverse() !
+  */
+
+  function reverseString(str) {
+    var arr = [], left = 0, right = str.length-1;
+    while(left < right) {
+      arr[left] = str[right];
+      arr[right] = str[left];
+      left++;
+      right--;
+    }
+    str = arr.join("");
+    return str;
+  }
+  console.log(reverseString("Hello world this is Kevin"));
