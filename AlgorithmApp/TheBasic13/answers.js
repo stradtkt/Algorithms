@@ -73,3 +73,23 @@
    }
 // valuesGreaterThanY([1,22,33,44,55,66,77,88],44);
 
+/**
+ * Print Max, Min, Average Array Values
+ * printMaxMinAverageArrayVals(arr)
+ * Given an array, print the max, min and average values for that array.
+ */
+
+ function printMinMaxAverage(arr) {
+   var min = 0, max = 0, sum = 0, avg = 0;
+   min = Math.min(...arr);
+   max = Math.max(...arr);
+   for(var i = 0; i < arr.length; i++) {
+    sum += arr[i];
+   }
+   avg = sum / arr.length;
+   return [min, max, avg];
+ }
+//  console.log(printMinMaxAverage([1,2,3,4,5,6,7,8]));
+ //output [1,8,4.5]
+
+ 
