@@ -137,3 +137,37 @@ console.log(getDigits("0s1a3y5w7h9a2t4?6!8?0"));
     return str;
   }
   console.log(reverseString2("Hello world this is Kevin"));
+
+  /**
+   * Remove Even-Length Strings
+   * Build a standalone function to remove strings of even lengths 
+   * from a given array. For array containing ["Nope!","Its","Kris","starting","with","K!"," 
+   * (instead","of","Chris","with","C)","."] , 
+   * change that same array to ["Nope!","Its","Chris","."] .
+   */
+
+function removeEvenLengthStrings(arr) {
+  for(var i = 0; i < arr.length; i++) {
+    if(arr[i].length % 2 == 0) {
+      for(var j = i; j < arr.length; j++) {
+        arr[j] = arr[j+1];
+      }
+      arr.length--;
+      i--;
+    }
+  }
+  return arr;
+}
+console.log(removeEvenLengthStrings(["Past", "time", "with", "kevin"]));
+//output ["kevin"]
+
+/**
+ * Integer to Roman Numerals
+ * Given a positive integer that is less than 4000, return a string containing 
+ * that value in Roman numeral representation. In this representation, 
+ * I is 1, V is 5, X is 10, L = 50, C = 100, D = 500, and M = 1000.
+ * Remember that 4 is IV, 349 is CCCIL and 444 is CDXLIV.
+ */
+function integerToRomanNumerals() {
+  
+}
