@@ -84,3 +84,26 @@ console.log(getDigits("0s1a3y5w7h9a2t4?6!8?0"));
     return count;
   }
   console.log(nonSpaces("Honey pie"));
+
+/**
+ * Remove Shorter Strings
+ * Given a string array and value (length), 
+ * remove any strings shorter than length from the array.
+ */
+
+ function removeShorterStrings(arr, len) {
+   for(var i = 0; i < arr.length; i++) {
+     if(arr[i].length < len) {
+       for(var j = i; j < arr.length; j++) {
+         arr[j] = arr[j+1];
+       }
+       arr.length--;
+       i--;
+     }
+   }
+   return arr;
+ }
+ console.log(removeShorterStrings(["Hello", "There", "my", "name", "is", "kevin"],3));
+ //output ["Hello", "There", "name", "kevin"]
+
+ 
