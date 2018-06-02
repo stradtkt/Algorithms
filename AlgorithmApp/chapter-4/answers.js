@@ -67,4 +67,20 @@ console.log(getDigits("0s1a3y5w7h9a2t4?6!8?0"));
  console.log(acronyms(" Live from New York, it's Saturday Night!"));
 
 
- 
+ /**
+  * Count Non-Spaces
+  * Accept a string and return the number of non-space
+  *  characters found in the string. For example, given 
+  * "Honey pie, you are driving me crazy" , return 29 (not 35 ).
+  */
+
+  function nonSpaces(str) {
+    var count = 0;
+    for(var i = 0; i < str.length; i++) {
+      if(str[i] !== " ") {
+        count++;
+      }
+    }
+    return count;
+  }
+  console.log(nonSpaces("Honey pie"));
