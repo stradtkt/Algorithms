@@ -15,7 +15,7 @@ function removeBlanks(str) {
   return str;
 }
 
-console.log(removeBlanks(" Ke   v  in  W  as   H e r e"));
+// console.log(removeBlanks(" Ke   v  in  W  as   H e r e"));
 
 /**
  * String: Get Digits
@@ -43,7 +43,7 @@ function getDigits(str) {
   numStr = Number(numStr);
   return numStr; 
 }
-console.log(getDigits("0s1a3y5w7h9a2t4?6!8?0"));
+// console.log(getDigits("0s1a3y5w7h9a2t4?6!8?0"));
 
 /**
  * Acronyms
@@ -62,9 +62,9 @@ console.log(getDigits("0s1a3y5w7h9a2t4?6!8?0"));
    str = str2;
    return str;
  }
- console.log(acronyms("there's no free lunch - gotta pay yer way. "));
- console.log(acronyms(" Young Money Cash Money Ballers"));
- console.log(acronyms(" Live from New York, it's Saturday Night!"));
+//  console.log(acronyms("there's no free lunch - gotta pay yer way. "));
+//  console.log(acronyms(" Young Money Cash Money Ballers"));
+//  console.log(acronyms(" Live from New York, it's Saturday Night!"));
 
 
  /**
@@ -83,7 +83,7 @@ console.log(getDigits("0s1a3y5w7h9a2t4?6!8?0"));
     }
     return count;
   }
-  console.log(nonSpaces("Honey pie"));
+  // console.log(nonSpaces("Honey pie"));
 
 /**
  * Remove Shorter Strings
@@ -103,7 +103,7 @@ console.log(getDigits("0s1a3y5w7h9a2t4?6!8?0"));
    }
    return arr;
  }
- console.log(removeShorterStrings(["Hello", "There", "my", "name", "is", "kevin"],3));
+//  console.log(removeShorterStrings(["Hello", "There", "my", "name", "is", "kevin"],3));
  //output ["Hello", "There", "name", "kevin"]
 
  /**
@@ -124,7 +124,7 @@ console.log(getDigits("0s1a3y5w7h9a2t4?6!8?0"));
     str = arr.join("");
     return str;
   }
-  console.log(reverseString("Hello world this is Kevin"));
+  // console.log(reverseString("Hello world this is Kevin"));
 
   //Another example of a reverse String method
 
@@ -136,7 +136,7 @@ console.log(getDigits("0s1a3y5w7h9a2t4?6!8?0"));
     str = newStr;
     return str;
   }
-  console.log(reverseString2("Hello world this is Kevin"));
+  // console.log(reverseString2("Hello world this is Kevin"));
 
   /**
    * Remove Even-Length Strings
@@ -158,7 +158,7 @@ function removeEvenLengthStrings(arr) {
   }
   return arr;
 }
-console.log(removeEvenLengthStrings(["Past", "time", "with", "kevin"]));
+// console.log(removeEvenLengthStrings(["Past", "time", "with", "kevin"]));
 //output ["kevin"]
 
 /**
@@ -197,4 +197,42 @@ function integerToRomanNumerals(num) {
   }
   return roman;
 }
-console.log(integerToRomanNumerals(3104));
+// console.log(integerToRomanNumerals(3104));
+
+/**
+ * Roman Numerals to Integer
+ * Sept 16, 2014 headline: “ Ancient Computer Found in Roman Shipwreck ”. 
+ * Comprising 30 bronze gears, its wooden frame features 2000 characters. 
+ * Given a string containing a Roman numeral representation of a positive 
+ * integer, return the integer. Remember that III is
+ * 3 , DCIX is 609 and MXDII is 1492 .
+ */
+
+ function romanNumeralsToInteger(str) {
+    var obj = {
+      "I": 1,
+      "V": 5,
+      "X": 10,
+      "L": 50,
+      "C": 100,
+      "D": 500,
+      "M": 1000
+    }
+    var num = 0;
+    for(var i = 0; i < str.length; i++) {
+      if(obj.hasOwnProperty(str[i])) {
+        if(obj[str[i+1]] > obj[str[i]]) {
+          num -= obj[str[i]];
+        } else {
+          num += obj[str[i]];
+        }
+      } else {
+        return "Invalid roman numeral";
+      }
+    }
+    return num;
+ }
+//  console.log(romanNumeralsToInteger("CXXXV"));
+ //output 135
+//  console.log(romanNumeralsToInteger("MMCCXXVI"));
+ //output 2226
