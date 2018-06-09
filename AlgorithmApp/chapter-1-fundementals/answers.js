@@ -128,3 +128,72 @@ function countingTheDojoWay() {
    }
  }
 //  flexibleCountdown(1, 10 , 2);
+
+/**
+ * The Final Countdown
+ * This is based on “Flexible Countdown”. 
+ * The parameter names are not as helpful, but the problem is 
+ * essentially identical; don’t be thrown off! Given 4 parameters 
+ * (param1,param2,param3,param4) , print the multiples of param1 , 
+ * starting at param2 and extending to param3 . One exception: if a multiple is 
+ * equal to param4 , then skip (don’t print) it. Do this using a WHILE . Given (3,5,17,9) ,
+ * print 6,12,15 (which are all of the multiples of 3 between 5 and 17 , and excluding the value 9 ).
+ */
+
+ function theFinalCountdown(lowNum, highNum, mult, skip) {
+   for(var i = highNum; i >= lowNum; i -= mult) {
+     if(i === skip) {
+       continue;
+     }
+     console.log(i);
+   }
+ }
+//  theFinalCountdown(2, 20, 2, 14);
+
+ /**
+  * Countdown
+  * Create a function that accepts a number as an input. 
+  * Return a new array that counts down by one, from the number 
+  * (as array’s ‘zeroth’ element) down to 0 (as the last element). How long is this array?
+  */
+
+  function countdown(num) {
+    var arr = [];
+    var count = 0;
+    for(var i = num; i >= 0; i--) {
+      if(num < 0) {
+        break;
+      }
+      arr.push(i);
+      count++;
+    }
+    console.log(count);
+    return arr;
+  }
+  // countdown(10);
+
+/**
+ * First Plus Length
+ * Given an array, return the sum of the first value in the array, 
+ * plus the array’s length. What happens if the array’s first value is not 
+ * a number, but a string (like "what?") or a boolean (like false ).
+ */
+
+ function firstPlusLength(arr) {
+   return arr[0] + arr.length;
+ }
+//  console.log(firstPlusLength([1,2,3,4,5,6,7]));
+
+/**
+ * Values Greater than Second
+ * For [1,3,5,7,9,13] , print values that are greater than its 2 nd value. 
+ * Return how many values this is.
+ */
+function valueGreaterThanSecond(arr) {
+  for(var i = 0; i < arr.length; i++) {
+    if(arr[i] > arr[1]) {
+      console.log(arr[i]);
+    }
+  }
+} 
+// valueGreaterThanSecond([1,3,5,7,9]);
