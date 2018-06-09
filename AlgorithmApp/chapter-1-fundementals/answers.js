@@ -98,3 +98,33 @@ function printWithWhile() {
 //  console.log(leapYear(2004));
 //  console.log(leapYear(1998));
 
+/**
+ * Counting, the Dojo Way
+ * Print integers 1 to 100. If divisible by 5, print "Coding" instead . If by 10, also print " Dojo" .
+ */
+function countingTheDojoWay() {
+  for(var i = 1; i <= 100; i++) {
+    if(i % 5 === 0) {
+     console.log("Coding");
+    } 
+    if(i % 10 === 0) {
+      console.log(" Dojo");
+    }
+    console.log(i);
+  }
+}
+// countingTheDojoWay();
+
+/**
+ * Flexible Countdown
+ * Based on earlier “Countdown by Fours”, given lowNum , highNum , mult , 
+ * print multiples of mult from highNum down to lowNum , using a FOR .
+ * For (2,9,3) , print 963 (on successive lines).
+ */
+
+ function flexibleCountdown(lowNum, highNum, mult) {
+   for(var i = highNum; i >= lowNum; i -= mult) {
+      console.log(i);
+   }
+ }
+//  flexibleCountdown(1, 10 , 2);
