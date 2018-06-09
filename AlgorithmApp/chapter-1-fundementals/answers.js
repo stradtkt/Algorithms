@@ -40,3 +40,31 @@
  }
 //  beCheerful();
 
+/**
+ * Multiples of Three – but Not All
+ * Using FOR , print multiples of 3 from -300 to 0. Skip -3 and -6.
+ */
+
+ function multiplesOfThree() {
+   var start = 3, end = -300;
+   for(var i = start; i >= end; i--) {
+     if(i == -3 || i == -6) {
+       continue;
+     }
+     console.log(i);
+   }
+ }
+// multiplesOfThree();
+
+/**
+ * Printing Integers with While
+ * Print integers from 2000 to 5280, using a WHILE .
+ */
+function printWithWhile() {
+  var start = 2000, end = 5280;
+  while(start <= end) {
+    start++;
+    console.log(start);
+  }
+}
+// printWithWhile();
