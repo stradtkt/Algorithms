@@ -68,3 +68,33 @@ function printWithWhile() {
   }
 }
 // printWithWhile();
+
+/**
+ * You Say It’s Your Birthday
+ * If 2 given numbers represent your birth month and day in either order , 
+ * log "How did you know?" , else log "Just another day...."
+ */
+
+ function sayItsYourBirthday(num1, num2) {
+   if((num1 === 8 && num2 === 25) || (num1 === 25 && num2 === 8)) {
+     console.log("It is your birthday");
+   } else {
+     console.log("Just another day");
+   }
+ }
+
+// sayItsYourBirthday(8, 25);
+// sayItsYourBirthday(4, 25);
+
+/**
+ * Leap Year
+ * Write a function that determines whether a given year is a leap year. 
+ * If a year is divisible by four, it is a leap year, unless it is divisible by 100. However, if it is divisible by 400, then it is .
+ */
+
+ function leapYear(year) {
+   return ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0));
+ }
+//  console.log(leapYear(2004));
+//  console.log(leapYear(1998));
+
