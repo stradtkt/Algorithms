@@ -87,3 +87,35 @@ function drawCenteredStars(num) {
   console.log(stars);
 }
 // drawCenteredStars(30);
+
+/**
+ * Generate Coin Change
+ * Change is inevitable (especially when breaking a twenty). 
+ * Make generateCoinChange(cents) . Accept a number of American cents, 
+ * compute and print how to represent that amount with smallest number of coins. 
+ * Common American coins are pennies (1 cent), nickels (5 cents), dimes (10 cents), and quarters (25 cents).
+ */
+
+ function generateCoinChange(cents) {
+   var coins = [100,50,25,10,5,1];
+   var result = [];
+   for(var i = 0; i < coins.length; i++) {
+    result.push(Math.floor(cents/coins[i]));
+    cents %= coins[i];
+   }
+   return result;
+ }
+ console.log(generateCoinChange(139));
+
+
+ function fibonacci(num) {
+   var sum = 0, i = 0, j = 1;
+   while(num > 1) {
+     sum = i + j;
+     i = j;
+     j = sum;
+     num--;
+   }
+   return sum;
+ }
+ console.log(fibonacci(8));
