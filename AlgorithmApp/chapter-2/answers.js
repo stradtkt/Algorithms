@@ -119,3 +119,41 @@ function drawCenteredStars(num) {
    return sum;
  }
  console.log(fibonacci(8));
+
+ /**
+  * Sum to One Digit
+  * Kaitlin sees beauty in numbers, but also believes that less is more. 
+  * Implement sumToOne(num) that sums a given integer’s digits repeatedly 
+  * until the sum is only one digit. Return that one-digit result. 
+  * Example: sumToOne(928) returns 1 , because 9+2+8 = 19, then 1+9 = 10, then 1+0 = 1 .
+  */
+ function sumToOne(num) {
+   if(num < 10) {
+     return num;
+   }
+   var str = num.toString();
+   var sum = 0;
+   for(var i = 0; i < str.length; i++) {
+    sum += Number(str[i]);
+   }
+   return sumToOne(sum);
+ }
+
+ console.log(sumToOne(1099901));
+
+ /**
+  * Is Prime
+  * Return whether a given integer is prime. Prime numbers are only 
+  * evenly divisible by themselves and 1. Many highly optimized solutions 
+  * exist, but for now just create one that is easy to understand and debug .
+  */
+
+  function isPrime(num) {
+    for(var i = num - 1; i > 1; i--) {
+      if(num % i === 0) {
+        return false;
+      }
+    }
+    return true;
+  }
+  console.log(isPrime(11));
