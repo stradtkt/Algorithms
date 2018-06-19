@@ -185,3 +185,42 @@ function drawCenteredStars(num) {
      return num * cost;
    }
    console.log(rockinDojoSweatshirt(3));
+
+   /**
+    * Character Art
+    */
+function drawLeftCharacters(num, char) {
+  var output = "";
+  for(var i = 1; i <= num; i++) {
+    output+=char;
+  }
+  console.log(output);
+}
+drawLeftCharacters(20, 'f');
+
+function drawRightCharacters(num, char) {
+  var output = "";
+  for(var i = 1; i <= 75-num; i++) {
+    output+=" "
+  }
+  for(var i = 0; i <= num; i++) {
+    output+=char;
+  }
+  console.log(output);
+}
+drawRightCharacters(20,'f');
+
+function drawCenteredCharacters(num, char) {
+  var output = "";
+  for(var i = 1; i <= Math.ceil(75/2-num/2); i++) {
+    output+=" ";
+  }
+  for(var i = 0; i <= num; i++) {
+    output+=char;
+  }
+  for(var i = 1; i <= Math.ceil(75/2-num/2); i++) {
+    output+=" ";
+  }
+  console.log(output);
+}
+drawCenteredCharacters(20, 'f');
