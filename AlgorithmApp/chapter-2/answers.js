@@ -224,3 +224,9 @@ function drawCenteredCharacters(num, char) {
   console.log(output);
 }
 drawCenteredCharacters(20, 'f');
+
+
+/**
+ * 
+ */
+
