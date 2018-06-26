@@ -82,4 +82,31 @@ function playStatistics3(numTimes) {
   console.log("Min is " + min);
   console.log("Sum is " + sum);
 }
-playStatistics3(10);
+// playStatistics3(10);
+
+function playStatistics4(num) {
+  var max;
+  var min;
+  var sum = 0;
+  for(var i = 1; i <= num; i++) {
+    result = rollOne();
+    if(!max) {
+      max = result;
+    }
+    if(!min) {
+      min = result;
+    }
+    if(result > max) {
+      max = result;
+    }
+    if(result < min) {
+      min = result;
+    }
+    sum += result;
+  }
+  console.log("Max is " + max);
+  console.log("Min is " + min);
+  console.log("Sum is " + sum);
+  console.log("Avg is " + sum/num);
+}
+playStatistics4(10);
