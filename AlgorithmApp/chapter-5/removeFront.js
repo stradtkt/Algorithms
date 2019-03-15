@@ -45,6 +45,6 @@ function SLL(){
 var List = new SLL();
 List.removeFront();
 List.addFront(3).addFront(2).addFront(1).addFront(0);
-List.printAsArray(); // [ 0, 1, 2, 3 ]
+List.printAsArray();
 List.removeFront();
 List.printAsArray();
